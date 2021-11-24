@@ -186,7 +186,7 @@ class GranuleCell(DbbsNeuronModel):
         ascending_axon.nseg = int(n)
         ascending_axon.L = self.ascending_axon_length
         ascending_axon.diam = 0.3
-        previous_section = self.axon_initial_segment
+        previous_section = self.axon_initial_segment[-1]
         self.axon.append(ascending_axon)
         ascending_axon.connect(previous_section)
         ascending_axon.labels = ["axon", "ascending_axon"]
